@@ -204,7 +204,7 @@
         <mapperTableEntries name="email" expression="row1.email " type="id_String" nullable="true"/>
         <mapperTableEntries name="phone" expression="row1.phone " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="invalid" activateCondensedTool="true" columnNameFilter="" reject="true">
+      <outputTables sizeState="INTERMEDIATE" name="invalid" activateExpressionFilter="true" activateCondensedTool="true" columnNameFilter="" reject="true">
         <mapperTableEntries name="customer_id" expression="row1.customer_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="full_name" expression="row1.full_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="row1.email " type="id_String" nullable="true"/>
