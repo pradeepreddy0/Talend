@@ -1,0 +1,25 @@
+package routines;
+
+import java.security.MessageDigest;
+
+public class RowHashUtil {
+
+    /**
+     * Generate MD5 hash from a string (e.g., email)
+     */
+    public static String getEmailHash(String email) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] hashBytes = md.digest(email.getBytes("UTF-8"));
+
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashBytes) {
+                sb.append(String.format("%02x", b));
+            }
+
+            return sb.toString();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
